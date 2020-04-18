@@ -2,12 +2,13 @@
 
 class Event {
 
-    private $a;
-    private $b;
-    private $c;
-    private $isServed;
-    private $currentState;  //1-arrived, 2-service start, 3-service stop
-    private $serviceTime;
+    public $a;
+    public $b;
+    public $c;
+    public $isServed;
+    public $currentState;  //1-arrived, 2-service start, 3-service stop
+    public $serviceTime;
+    public $next;
 
     public function setArrivalTime($timeValue) {
         $this->a = $timeValue;
