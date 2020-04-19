@@ -15,5 +15,6 @@ class SystemQueue {
 
     public const V = 100;
     public const NUMBER_OF_ROUNDS = 10;
-    public const NUMBER_OF_SERVERS = 3;
+    public const NUMBER_OF_SERVERS = 2;
+
 }

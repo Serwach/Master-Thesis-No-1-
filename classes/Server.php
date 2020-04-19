@@ -2,10 +2,9 @@
 
 class Server {
 
-    private $isBusy;
-    private $time;
-    private $serverNumber;
-
+    public $serverNumber;
+    public $isBusy;
+    public $time;
 
     public function __construct() {
         $this->isBusy = 0;
@@ -27,16 +26,17 @@ class Server {
     public function getTime() {
         return $this->time;
     }
-    
+
     public function setServerNumber($value) {
         $this->serverNumber = $value;
     }
 
     public function getServerNumber() {
         return $this->serverNumber;
-    }    
+    }
 
-    public function printServer() {
+    public function __toString() {
         echo "SERWER NR " . $this->getServerNumber() . " JEST " . $this->isBusy . " DO " . $this->time . "<br>";
     }
+
 }

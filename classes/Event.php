@@ -2,24 +2,23 @@
 
 class Event {
 
-    public $a;
-    public $b;
-    public $c;
+    public $arrivalTime;
+    public $startServiceTime;
+    public $stopServiceTime;
     public $isServed;
     public $currentState;  //1-arrived, 2-service start, 3-service stop
     public $serviceTime;
-    public $next;
 
     public function setArrivalTime($timeValue) {
-        $this->a = $timeValue;
+        $this->arrivalTime = $timeValue;
     }
 
     public function setStartServiceTime($timeValue) {
-        $this->b = $timeValue;
+        $this->startServiceTime = $timeValue;
     }
 
     public function setStopServiceTime($timeValue) {
-        $this->c = $timeValue;
+        $this->stopServiceTime = $timeValue;
     }
 
     public function setServiceTime($timeValue) {
@@ -58,7 +57,7 @@ class Event {
         return $this->currentState;
     }
 
-    public function printEvent() {
+    public function __toString() {
         echo "arrival time          = " . $this->getArrivalTime() . "<br>";
         echo "start-service time    = " . $this->getStartServiceTime() . "<br>";
         echo "service time          = " . $this->getServiceTime() . "<br>";
